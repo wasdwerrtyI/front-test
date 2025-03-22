@@ -128,7 +128,6 @@ export const HeroContainer = styled.div`
     padding: ${SIZES.padding.mobile.vertical} ${SIZES.padding.mobile.horizontal};
     ${SIZES.padding.mobile.bottom};
     align-items: center;
-    overflow: visible;
   }
 `;
 
