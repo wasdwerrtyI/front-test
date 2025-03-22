@@ -1,0 +1,32 @@
+{
+  "files": {
+    "main.css": "/front-test/static/css/main.d5e1a5bd.css",
+    "main.js": "/front-test/static/js/main.7d4bbdb9.js",
+    "static/media/Rectangle1.1.png": "/front-test/static/media/Rectangle1.1.e5b7b61ffe6c2c522872.png",
+    "static/media/Rectangle 2.1.png": "/front-test/static/media/Rectangle 2.1.c370165890444ef0f3a1.png",
+    "static/media/Rectangle 85.png": "/front-test/static/media/Rectangle 85.3fc41dfcbbb6f818a0b1.png",
+    "static/media/image (1).png": "/front-test/static/media/image (1).5ea7bf7206fe7f4f835b.png",
+    "static/media/image (2).png": "/front-test/static/media/image (2).f7af11dfaa342d054999.png",
+    "static/media/RectangleCreatePhone.png": "/front-test/static/media/RectangleCreatePhone.e9c184f27894ba5e70b9.png",
+    "static/media/Dot Ornament.svg": "/front-test/static/media/Dot Ornament.ff9bb7c74bd47a184cbd2ffb91ed437b.svg",
+    "static/media/WaveFooter.svg": "/front-test/static/media/WaveFooter.eb797fdb7384d674d2467016892893ee.svg",
+    "static/media/WaveHeader.svg": "/front-test/static/media/WaveHeader.5976fb32186484a0eb95bdc6be3ad00a.svg",
+    "static/media/instagram.svg": "/front-test/static/media/instagram.307731411724c8952eb975b0162766f7.svg",
+    "static/media/twitter.svg": "/front-test/static/media/twitter.649f6be430cf2a0943c1d65af3070383.svg",
+    "static/media/Arrow 01.svg": "/front-test/static/media/Arrow 01.19b33af0ea8449cf52dd2f742b80878d.svg",
+    "index.html": "/front-test/index.html",
+    "static/media/in.svg": "/front-test/static/media/in.18f98c7ee700b4205490f927d7942e46.svg",
+    "static/media/ArrowSliderLeft.svg": "/front-test/static/media/ArrowSliderLeft.369e726a50884ff09f8adedebf07d906.svg",
+    "static/media/ArrowSliderRight.svg": "/front-test/static/media/ArrowSliderRight.5536b37ef660f53b4925a07ecc412c2c.svg",
+    "static/media/burger.svg": "/front-test/static/media/burger.834755c85f833c24044bbe0e3cd9b61a.svg",
+    "static/media/facebook.svg": "/front-test/static/media/facebook.9e6bc26768c4b97156e48b955d1e83ca.svg",
+    "static/media/cross.svg": "/front-test/static/media/cross.cca80b893616278efc37c64ebe87d57b.svg",
+    "static/media/mdi_ethereum.svg": "/front-test/static/media/mdi_ethereum.55fe734a29c890127bd516a1b7f80fa5.svg",
+    "main.d5e1a5bd.css.map": "/front-test/static/css/main.d5e1a5bd.css.map",
+    "main.7d4bbdb9.js.map": "/front-test/static/js/main.7d4bbdb9.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.d5e1a5bd.css",
+    "static/js/main.7d4bbdb9.js"
+  ]
+}
