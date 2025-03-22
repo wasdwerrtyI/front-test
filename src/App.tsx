@@ -1,25 +1,24 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import CreateNFT from "./components/create/CreateNFT";
+import Header from "./components/header/Header";
+import Hero from "./components/hero/Hero";
+import WeeklyNFT from "./components/weekly/WeeklyNFT";
+import Footer from "./components/footer/Footer";
+import { GlobalStyle } from "./styles/GlobalStyles";
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <>
+      <div className="App">
+        <GlobalStyle />
+        <Header />
+        <div className="content-container">
+          <Hero />
+          <WeeklyNFT />
+          <CreateNFT />
+          <Footer />
+        </div>
+      </div>
+    </>
   );
 }
 
