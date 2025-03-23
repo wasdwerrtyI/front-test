@@ -1,5 +1,5 @@
 import React from "react";
-import nft1 from "../../assets/images/RectangleCreatePhone.png";
+import { nft1 } from "../../assets";
 
 import ButtonMoreCreateNFT from "./ButtonMoreCreateNFT";
 import ButtonMoreSellCreateNFT from "./ButtonSellCreateNFT";
@@ -19,8 +19,8 @@ const CreateNFT: React.FC = () => {
         <Title>Create and Sell NFTs</Title>
         <Subtitle>World's Largest NFT Place</Subtitle>
         <ButtonGroup>
-          <ButtonMoreCreateNFT text="Explore More"></ButtonMoreCreateNFT>
-          <ButtonMoreSellCreateNFT text="Sell Artwork"></ButtonMoreSellCreateNFT>
+          <ButtonMoreCreateNFT>Explore More</ButtonMoreCreateNFT>
+          <ButtonMoreSellCreateNFT>Sell Artwork</ButtonMoreSellCreateNFT>
         </ButtonGroup>
       </ContentSide>
       <ImageSide>

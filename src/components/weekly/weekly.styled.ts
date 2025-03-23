@@ -27,8 +27,8 @@ const COLORS = {
 };
 
 const BREAKPOINTS = {
-  tabletDesktop: "(min-width: 375px) and (max-width: 1440px)",
-  desktop: "(min-width: 1024px) and (max-width: 1440px)",
+  tabletDesktop: "(min-width: 375px) and (max-width: 1439px)",
+  desktop: "(min-width: 1024px) and (max-width: 1439px)",
   tablet: "(max-width: 1024px)",
 };
 
@@ -196,7 +196,7 @@ export const Price = styled.div`
   }
 `;
 
-export const PlaceBidButton = styled.button`
+export const PlaceBidButton = styled.button.attrs({ type: "button" })`
   padding: 12px 24px;
   background: ${COLORS.card.button};
   border: none;

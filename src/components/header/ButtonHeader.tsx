@@ -2,11 +2,15 @@ import React from "react";
 import styled from "styled-components";
 
 interface ButtonHeaderProps {
-  text: string;
+  children: React.ReactNode;
   onClick?: () => void;
 }
 
-const StyledButton = styled.button`
+const ButtonHeader: React.FC<ButtonHeaderProps> = ({ children, onClick }) => {
+  return <StyledButton onClick={onClick}>{children}</StyledButton>;
+};
+
+const StyledButton = styled.button.attrs({ type: "button" })`
   background: #000000;
   color: #ffffff;
   border: none;
@@ -30,9 +34,5 @@ const StyledButton = styled.button`
     font-size: 18px;
   }
 `;
-
-const ButtonHeader: React.FC<ButtonHeaderProps> = ({ text, onClick }) => {
-  return <StyledButton onClick={onClick}>{text}</StyledButton>;
-};
 
 export default ButtonHeader;

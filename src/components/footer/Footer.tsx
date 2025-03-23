@@ -1,10 +1,12 @@
 import React from "react";
 
-import WaveIcon from "../../assets/icons/WaveFooter.svg";
-import InstagramIcon from "../../assets/icons/social/instagram.svg";
-import LinkedInIcon from "../../assets/icons/social/in.svg";
-import FacebookIcon from "../../assets/icons/social/facebook.svg";
-import TwitterIcon from "../../assets/icons/social/twitter.svg";
+import {
+  facebookIcon,
+  inIcon,
+  instagrammIcon,
+  twitter,
+  waveFooter,
+} from "../../assets";
 
 import {
   Copyright,
@@ -29,21 +31,21 @@ const Footer: React.FC = () => {
         <LogoAndNavContainer>
           <LogoSection>
             <Logo>
-              <img src={WaveIcon} alt="DiveSea Logo" />
+              <img src={waveFooter} alt="DiveSea Logo" />
               DiveSea
             </Logo>
             <MobileSocialLinks>
               <SocialIcon href="#" aria-label="Instagram">
-                <img src={InstagramIcon} alt="Instagram" />
+                <img src={instagrammIcon} alt="Instagram" />
               </SocialIcon>
               <SocialIcon href="#" aria-label="LinkedIn">
-                <img src={LinkedInIcon} alt="LinkedIn" />
+                <img src={inIcon} alt="LinkedIn" />
               </SocialIcon>
               <SocialIcon href="#" aria-label="Facebook">
-                <img src={FacebookIcon} alt="Facebook" />
+                <img src={facebookIcon} alt="Facebook" />
               </SocialIcon>
               <SocialIcon href="#" aria-label="Twitter">
-                <img src={TwitterIcon} alt="Twitter" />
+                <img src={twitter} alt="Twitter" />
               </SocialIcon>
             </MobileSocialLinks>
           </LogoSection>
@@ -63,16 +65,16 @@ const Footer: React.FC = () => {
           </Copyright>
           <DesktopSocialLinks>
             <SocialIcon href="#" aria-label="Instagram">
-              <img src={InstagramIcon} alt="Instagram" />
+              <img src={instagrammIcon} alt="Instagram" />
             </SocialIcon>
             <SocialIcon href="#" aria-label="LinkedIn">
-              <img src={LinkedInIcon} alt="LinkedIn" />
+              <img src={inIcon} alt="LinkedIn" />
             </SocialIcon>
             <SocialIcon href="#" aria-label="Facebook">
-              <img src={FacebookIcon} alt="Facebook" />
+              <img src={facebookIcon} alt="Facebook" />
             </SocialIcon>
             <SocialIcon href="#" aria-label="Twitter">
-              <img src={TwitterIcon} alt="Twitter" />
+              <img src={twitter} alt="Twitter" />
             </SocialIcon>
           </DesktopSocialLinks>
         </RightSection>

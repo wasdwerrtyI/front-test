@@ -137,7 +137,6 @@ export const Wave = styled.div`
   right: 190px;
   z-index: 3;
 
-  cursor: pointer;
   transition: transform 0.3s ease;
   animation: ${fadeInArrow} 0.6s cubic-bezier(0.4, 0, 0.2, 1) 1300ms backwards;
 
@@ -390,7 +389,6 @@ export const MainImage = styled.div`
   position: relative;
   z-index: 2;
   transition: transform 0.3s ease;
-  cursor: pointer;
   animation: ${slideInFromRight} 1s cubic-bezier(0.4, 0, 0.2, 1) 200ms backwards;
 
   .blur-nft {
@@ -429,7 +427,7 @@ export const SecondaryImage = styled.div`
   right: -20px;
   z-index: 1;
   transition: transform 0.3s ease;
-  cursor: pointer;
+
   animation: ${slideInFromRight} 1s cubic-bezier(0.4, 0, 0.2, 1) 400ms backwards;
   top: 185px;
 

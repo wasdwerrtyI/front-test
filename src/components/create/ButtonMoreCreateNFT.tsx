@@ -1,11 +1,14 @@
 import styled from "styled-components";
 
 type ButtonProps = {
-  text: string;
+  children: React.ReactNode;
   onClick?: () => void;
 };
 
-const StyledButton = styled.button`
+export function ButtonMoreCreateNFT({ children, onClick }: ButtonProps) {
+  return <StyledButton onClick={onClick}>{children}</StyledButton>;
+}
+const StyledButton = styled.button.attrs({ type: "button" })`
   background-color: #ffffff;
   color: #141416;
   padding: 16px 24px;
@@ -21,7 +24,7 @@ const StyledButton = styled.button`
     background-color: #f2f2f2;
   }
 
-  @media (min-width: 1024px) and (max-width: 1440px) {
+  @media (min-width: 1024px) and (max-width: 1439px) {
     font-size: 16px;
     padding: 15px 18px;
     border-radius: 9px;
@@ -32,9 +35,5 @@ const StyledButton = styled.button`
     border-radius: 6px;
   }
 `;
-
-export function ButtonMoreCreateNFT({ text, onClick }: ButtonProps) {
-  return <StyledButton onClick={onClick}>{text}</StyledButton>;
-}
 
 export default ButtonMoreCreateNFT;

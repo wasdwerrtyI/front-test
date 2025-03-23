@@ -20,12 +20,12 @@ const BREAKPOINTS = {
   values: {
     mobile: 1023,
     tablet: 1439,
-    desktop: 1920,
+    desktop: 1921,
     largeDesktop: 2560,
   },
   up: {
     tablet: "(min-width: 1024px)",
-    desktop: "(min-width: 1920px)",
+    desktop: "(min-width: 1921px)",
     largeDesktop: "(min-width: 2560px)",
   },
   down: {
@@ -210,9 +210,11 @@ export const Nav = styled.nav<{ $isOpen?: boolean }>`
 
 export const NavLink = styled.button`
   ${buttonReset}
+  padding: 8px 20px;
   color: ${COLORS.text.primary};
 
   &:hover {
+    padding: 8px 20px;
     border-radius: 10px;
     background-color: ${COLORS.hover};
   }

@@ -1,4 +1,4 @@
-import React, { useEffect, useMemo, useState } from "react";
+import React, { useEffect, useState } from "react";
 import { formatTime } from "../../shared/utils";
 import { Swiper } from "swiper/react";
 import { Navigation } from "swiper";
@@ -6,10 +6,6 @@ import "swiper/css/navigation";
 import "swiper/css";
 
 import { getNftData, NFTItem } from "./nftData";
-
-import ArrowLeft from "../../assets/icons/ArrowSliderLeft.svg";
-import ArrowRight from "../../assets/icons/ArrowSliderRight.svg";
-import EthereumIcon from "../../assets/icons/mdi_ethereum.svg";
 
 import {
   BidContainer,
@@ -28,16 +24,13 @@ import {
   Title,
   WeeklyContainer,
 } from "./weekly.styled";
+import { arrowSliderLeft, arrowSliderRight, mdiEthereum } from "../../assets";
+
+const TIME_EXPIRATION = 7 * 60 * 60 + 9 * 60 + 12;
 
 const WeeklyNFT: React.FC = () => {
-  const [displayCards, setDisplayCards] = useState<NFTItem[]>([]);
-  const [timeLeft, setTimeLeft] = useState(25632);
-
-  const nfts = useMemo(() => getNftData(), []);
-
-  useEffect(() => {
-    setDisplayCards(nfts);
-  }, [nfts]);
+  const [displayCards, setDisplayCards] = useState<NFTItem[]>(getNftData());
+  const [timeLeft, setTimeLeft] = useState(TIME_EXPIRATION);
 
   useEffect(() => {
     const timer = setInterval(() => {
@@ -52,48 +45,46 @@ const WeeklyNFT: React.FC = () => {
   return (
     <WeeklyContainer>
       <Title>Weekly - Top NFT</Title>
-      {displayCards.length > 0 && (
-        <Swiper
-          modules={[Navigation]}
-          spaceBetween={40}
-          centeredSlides={true}
-          loop={true}
-          slidesPerView={"auto"}
-          navigation={{
-            nextEl: ".custom-next",
-            prevEl: ".custom-prev",
-          }}
-        >
-          {displayCards.map((nft) => (
-            <StyledSwiperSlide key={nft.index}>
-              <NFTImage>
-                <img src={nft.image} alt={nft.title} />
-                <Timer>{formatTime(timeLeft)}</Timer>
-              </NFTImage>
-              <CardContent>
-                <CardTitle>{nft.title}</CardTitle>
-                <BidContainer>
-                  <BidInfo>
-                    <BidLabel>Current bid</BidLabel>
-                    <Price>
-                      <img src={EthereumIcon} alt="ETH" />
-                      {nft.price}
-                    </Price>
-                  </BidInfo>
-                  <PlaceBidButton>PLACE BID</PlaceBidButton>
-                </BidContainer>
-              </CardContent>
-            </StyledSwiperSlide>
-          ))}
-        </Swiper>
-      )}
+      <Swiper
+        modules={[Navigation]}
+        spaceBetween={40}
+        centeredSlides={true}
+        loop={true}
+        slidesPerView={"auto"}
+        navigation={{
+          nextEl: ".custom-next",
+          prevEl: ".custom-prev",
+        }}
+      >
+        {displayCards.map((nft) => (
+          <StyledSwiperSlide key={nft.index}>
+            <NFTImage>
+              <img src={nft.image} alt={nft.title} />
+              <Timer>{formatTime(timeLeft)}</Timer>
+            </NFTImage>
+            <CardContent>
+              <CardTitle>{nft.title}</CardTitle>
+              <BidContainer>
+                <BidInfo>
+                  <BidLabel>Current bid</BidLabel>
+                  <Price>
+                    <img src={mdiEthereum} alt="ETH" />
+                    {nft.price}
+                  </Price>
+                </BidInfo>
+                <PlaceBidButton>PLACE BID</PlaceBidButton>
+              </BidContainer>
+            </CardContent>
+          </StyledSwiperSlide>
+        ))}
+      </Swiper>
       <SliderControlWrapper>
         <NavButton className="custom-prev">
-          <img src={ArrowLeft} alt="Previous" />
+          <img src={arrowSliderLeft} alt="Previous" />
         </NavButton>
         <Stick />
         <NavButton className="custom-next">
-          <img src={ArrowRight} alt="Next" />
+          <img src={arrowSliderRight} alt="Next" />
         </NavButton>
       </SliderControlWrapper>
     </WeeklyContainer>

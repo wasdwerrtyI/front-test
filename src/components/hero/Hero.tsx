@@ -1,9 +1,11 @@
-import nft1 from "../../assets/images/Rectangle1.1.png";
-import nft2 from "../../assets/images/Rectangle 2.1.png";
-import dotSmall from "../../assets/images/dotSmall.png";
-import dotPhone from "../../assets/images/DotPhone.png";
-import Arrow from "../../assets/icons/Arrow 01.svg";
-import dot from "../../assets/icons/Dot Ornament.svg";
+import {
+  arrowHero,
+  dotOrnament,
+  dotPhone,
+  dotSmall,
+  HeroPic1,
+  HeroPic2,
+} from "../../assets";
 
 import ButtonMoreHero from "./ButtonMoreHero";
 import ButtonCreateNftHero from "./ButtonCreateNftHero";
@@ -42,8 +44,8 @@ export function Hero() {
           Thousands Of NFTs And Get a <Bonus>$20 bonus</Bonus>.
         </Description>
         <ButtonGroup>
-          <ButtonMoreHero text="EXPLORE MORE" />
-          <ButtonCreateNftHero text="CREATE NFT" />
+          <ButtonMoreHero>EXPLORE MORE</ButtonMoreHero>
+          <ButtonCreateNftHero>CREATE NFT </ButtonCreateNftHero>
         </ButtonGroup>
         <StatsGroup>
           <StatItem>
@@ -62,28 +64,28 @@ export function Hero() {
       </ContentSection>
       <ImageSection>
         <Wave>
-          <img src={Arrow} alt="" />
+          <img src={arrowHero} alt="" />
         </Wave>
         <MainImage>
           <ImgFirst>
-            <img className="image-left" src={nft1} alt="Featured NFT" />
+            <img className="image-left" src={HeroPic1} alt="Featured NFT" />
           </ImgFirst>
           <ImgSecond>
             <img
               className="image-left blur-nft"
-              src={nft1}
+              src={HeroPic1}
               alt="Secondary NFT"
             />
           </ImgSecond>
         </MainImage>
         <SecondaryImage>
           <ImgFirst>
-            <img className="image-right" src={nft2} alt="Featured NFT" />
+            <img className="image-right" src={HeroPic2} alt="Featured NFT" />
           </ImgFirst>
           <ImgSecond>
             <img
               className="image-right blur-nft"
-              src={nft2}
+              src={HeroPic2}
               alt="Secondary NFT"
             />
           </ImgSecond>
@@ -91,13 +93,13 @@ export function Hero() {
         <DotPattern>
           <picture>
             <source media="(max-width: 1024px)" srcSet={dotPhone} />
-            <source media="(max-width: 1440px)" srcSet={dotSmall} />
-            <img className="image-left" src={dot} alt="" />
+            <source media="(max-width: 1439px)" srcSet={dotSmall} />
+            <img className="image-left" src={dotOrnament} alt="" />
           </picture>
           <picture>
             <source media="(max-width: 1024px)" srcSet={dotPhone} />
-            <source media="(max-width: 1440px)" srcSet={dotSmall} />
-            <img className="image-left" src={dot} alt="" />
+            <source media="(max-width: 1439px)" srcSet={dotSmall} />
+            <img className="image-left" src={dotOrnament} alt="" />
           </picture>
         </DotPattern>
       </ImageSection>

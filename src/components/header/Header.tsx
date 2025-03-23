@@ -1,13 +1,15 @@
 import { useState, useEffect } from "react";
 import ButtonHeader from "./ButtonHeader";
 
-import burgerIcon from "../../assets/icons/burger.svg";
-import crossIcon from "../../assets/icons/cross.svg";
-import WaveHeader from "../../assets/icons/WaveHeader.svg";
-import instagramIcon from "../../assets/icons/social/instagram.svg";
-import twitterIcon from "../../assets/icons/social/twitter.svg";
-import facebookIcon from "../../assets/icons/social/facebook.svg";
-import insIcon from "../../assets/icons/social/in.svg";
+import {
+  burger,
+  cross,
+  facebookIcon,
+  inIcon,
+  instagrammIcon,
+  twitter,
+  waveHeader,
+} from "../../assets";
 
 import {
   ButtonContainer,
@@ -61,7 +63,7 @@ export function Header() {
           <IconAndNavContainer>
             <LogoContainer>
               <Logo>
-                <img src={WaveHeader} alt="WaveHeader" />
+                <img src={waveHeader} alt="WaveHeader" />
               </Logo>
               <LogoText>DiveSea</LogoText>
             </LogoContainer>
@@ -71,25 +73,25 @@ export function Header() {
               <NavLink>SELL</NavLink>
               <NavLink>STATS</NavLink>
               <IconsContainer>
-                <img src={instagramIcon} alt="instagramIcon" />
-                <img src={insIcon} alt="insIcon" />
+                <img src={instagrammIcon} alt="instagramIcon" />
+                <img src={inIcon} alt="insIcon" />
                 <img src={facebookIcon} alt="facebookIcon" />
-                <img src={twitterIcon} alt="twitterIcon" />
+                <img src={twitter} alt="twitterIcon" />
               </IconsContainer>
             </Nav>
 
             <MobileMenuButton onClick={toggleMenu} $isOpen={isMenuOpen}>
-              <img src={isMenuOpen ? crossIcon : burgerIcon} alt="Menu" />
+              <img src={isMenuOpen ? cross : burger} alt="Menu" />
             </MobileMenuButton>
           </IconAndNavContainer>
           <ButtonContainer>
-            <ButtonHeader text="CONNECT WALLET" />
+            <ButtonHeader>CONNECT WALLET</ButtonHeader>
           </ButtonContainer>
         </HeaderContainer>
       </HeaderInner>
 
       <FixedButtonContainer>
-        <ButtonHeader text="CONNECT WALLET" />
+        <ButtonHeader>CONNECT WALLET</ButtonHeader>
       </FixedButtonContainer>
     </>
   );
